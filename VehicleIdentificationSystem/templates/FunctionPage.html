@@ -72,16 +72,17 @@
                 {% csrf_token %}
                 <div style="padding-top: 20px">
                     <a class="file" style="margin-top: 20px;">选择文件
-                        <input type="file" name="pic" id="">
+                        <input type="file" name="picture" id="">
                     </a>
                     <div style="display: inline-block; color: white">
                         或
                     </div>
                     <input type="text" name="q" v-model="tempUrl" style="display: inline-block; margin: 0 auto;" placeholder="填写图片的URL">
                 </div>
-                <div style="margin-top: 30px; padding-bottom: 30px;">
-                    <input type="button" value="检测" @click="setUrl">
-                </div>
+{#                <div style="margin-top: 30px; padding-bottom: 30px;">#}
+{#                    <input type="summit" value="检测" @click="setUrl">#}
+{#                </div>#}
+                <input type="submit" value="检测">
             </form>
         </div>
     </div>
@@ -92,7 +93,7 @@
 <!-- 引入组件库 -->
 <!--<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
 <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
-<script src="/static/css/Element.js"></script>
+<script src="/static/js/Element.js"></script>
 <script>
     var ep = new Vue({
         el: '#app',
@@ -104,7 +105,7 @@
             Porsche: "/static/images/Car/Porsche.jpg",
             Urus: "/static/images/Car/Urus.jpg",
             showList: [true, false, false, false, false, false],
-            url: "/static/images/Car/CarCar.jpg",
+            url: "{{ path|default:'/static/images/Car/CarCar.jpg' }}",
             tempUrl: ""
         },
         methods: {
