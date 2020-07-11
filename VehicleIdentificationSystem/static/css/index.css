@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+    font-family: BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, PingFangSC-Regular, "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+#Header-Container {
+    background: url("/static/images/Mercedes.jpg");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+}
+
+.header-font {
+
+}
+
+#container {
+    width: 1680px;
+    margin: 0 auto;
+}
+
+#ImageView {
+    background: no-repeat 50%;
+}
+
+#distinguishBtn {
+    background-color: #036fe2;
+    transition: 0s;
+    -webkit-transition: 0s;
+}
+
+#distinguishBtn:hover {
+    background:#66b1ff;
+    border-color:#66b1ff;
+    color:#FFF;
+}
