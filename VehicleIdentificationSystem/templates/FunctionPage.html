@@ -79,7 +79,7 @@
         </div>
     </div>
 
-
+    {% block jump_path %}
     <div style="width: 1000px; margin: 40px auto; box-shadow: 2px 4px 5px gray; border: 1px solid #ccc;">
         <img id="backimg" :src="url" style="width: 1000px;height: 700px; object-fit: contain; border: none;">
         <div id="formContent" style="">
@@ -100,7 +100,24 @@
             </form>
         </div>
     </div>
+    {% endblock %}
 </div>
+<el-container style="background-color: black; color: white; margin-top: 150px; height: 400px">
+        <div style="width: 560px; margin: 80px auto;">
+            <el-main>
+                <el-row>
+                    <el-col style="font-size: 22px; padding-bottom: 15px">
+                        版权信息
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col>
+                        Copyright © 2013-2020 蔬菜汤  vegetablesoup.xyz All Rights Reserved.
+                    </el-col>
+                </el-row>
+            </el-main>
+        </div>
+    </el-container>
 </body>
 <!-- 先引入 Vue -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -120,11 +137,11 @@
             "Urus": "/static/images/Car/Urus.jpg",
             "showList": [true, false, false, false, false, false],
             "url":
-                {% if path %}
-                    "/static/media/{{ path }}"
-                {%else  %}
-                    "/static/images/Car/CarCar.jpg"
-                {% endif %},
+                    {% if path %}
+                        "/static/media/{{ path }}"
+                    {%else  %}
+                        "/static/images/Car/CarCar.jpg"
+                    {% endif %},
             tempUrl: ""
         },
         methods: {

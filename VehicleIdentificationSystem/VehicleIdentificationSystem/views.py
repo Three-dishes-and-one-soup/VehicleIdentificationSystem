@@ -54,11 +54,24 @@ def online_identification_license(request):
         # with open(str(lic_path + '/' + lic.name), 'wb') as f:
         #     for c in lic.chunks():
         #         f.write(c)
-    return render(request, 'license_identification.html', ctx)
+    return render(request, 'license.html', ctx)
 
 
 def online_identification_nums(request):
-    return None
+    ctx = {}
+    ctx['path'] = 0
+    if request.POST:
+        pic = request.FILES.get('picture')
+        pic_path = settings.MEDIA_ROOT
+        allow_upload = settings.ALLOW_UPLOAD
+        if pic.name.split('.')[-1] not in allow_upload:
+            tmp = ''
+        # ctx['warn'] = "请输入正确的图片格式！"
+        with open(pic_path + '/' + pic.name, 'wb') as f:
+            for c in pic.chunks():
+                f.write(c)
+        ctx['path'] = pic.name
+    return render(request, 'nums.html', ctx)
 
 
 def online_identification_attributes(request):

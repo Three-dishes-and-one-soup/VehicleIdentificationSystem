@@ -1,0 +1,25 @@
+{% extends 'FunctionPage.html' %}
+
+{% block jump_path %}
+<div style="width: 1000px; margin: 40px auto; box-shadow: 2px 4px 5px gray; border: 1px solid #ccc;">
+        <img id="backimg" :src="url" style="width: 1000px;height: 700px; object-fit: contain; border: none;">
+        <div id="formContent" style="">
+            <form action="/online-identification/nums/" method="post" enctype="multipart/form-data" style="width: 600px; margin: 0 auto;">
+                {% csrf_token %}
+                <div style="padding-top: 20px">
+                    <a class="file" style="float: left;">选择文件
+                        <input type="file" name="picture" id="">
+                    </a>
+                    <div style="float: left; line-height: 30px; margin: 0 10px;">
+                        或
+                    </div>
+                    <input type="text" name="q" v-model="tempUrl" style="display: inline-block; margin: 0 auto;" placeholder="填写图片的URL">
+                </div>
+                <div style="margin-top: 30px; padding-bottom: 30px;">
+                    <input type="submit" value="检测" @click="setUrl">
+                </div>
+            </form>
+        </div>
+</div>
+{% endblock %}
+

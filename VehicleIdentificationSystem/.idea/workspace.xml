@@ -31,11 +31,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\model_identification" />
     </key>
@@ -127,6 +130,7 @@
       <workItem from="1594518188443" duration="207000" />
       <workItem from="1594518480190" duration="326000" />
       <workItem from="1594519175968" duration="7917000" />
+      <workItem from="1594536074565" duration="3975000" />
     </task>
     <servers />
   </component>
