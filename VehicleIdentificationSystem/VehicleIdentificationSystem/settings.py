@@ -124,3 +124,4 @@ STATICFILES_DIRS = [
 ]
 ALLOW_UPLOAD = ['jpg', 'png', 'jpeg']
 MEDIA_ROOT = os.path.join(BASE_DIR, "static/media")
+LIC_ROOT = os.path.join(BASE_DIR, 'static/lic')

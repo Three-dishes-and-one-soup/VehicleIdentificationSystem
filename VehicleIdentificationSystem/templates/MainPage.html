@@ -44,12 +44,22 @@
             </el-container>
         </div>
     </el-container>
-    <el-tabs id="nav">
-        <el-tab-pane label="项目介绍" name="first" @click="hello()"></el-tab-pane>
-        <el-tab-pane label="应用场景" name="second"></el-tab-pane>
-        <el-tab-pane label="在线尝试" name="third"></el-tab-pane>
-        <el-tab-pane label="联系我们" name="fourth"></el-tab-pane>
-    </el-tabs>
+{#    <el-tabs id="nav">#}
+{#        <el-tab-pane label="项目介绍" name="first" @click="hello()"></el-tab-pane>#}
+{#        <el-tab-pane label="应用场景" name="second"></el-tab-pane>#}
+{#        <el-tab-pane label="在线尝试" name="third"></el-tab-pane>#}
+{#        <el-tab-pane label="联系我们" name="fourth"></el-tab-pane>#}
+{#    </el-tabs>#}
+{#    新增导航栏，主页面的导航栏是索引本页面位置的#}
+    <div class="nav-container">
+        <div class="nav" style="width: 720px;">
+            <a href="" style="width: 140px;">项目介绍</a>
+            <a href="" style="width: 140px;">应用场景</a>
+            <a href="" style="width: 140px;">在线识别</a>
+            <a href="" style="width: 140px;">联系我们</a>
+        </div>
+    </div>
+
     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">处理中心</el-menu-item>
         <el-submenu index="2">
