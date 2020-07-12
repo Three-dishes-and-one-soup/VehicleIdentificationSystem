@@ -8,7 +8,6 @@ from django.shortcuts import render
 from django.conf import settings
 from license_identification import img_pretreatment
 
-
 def index(request):
     return render(request, 'MainPage.html')
 

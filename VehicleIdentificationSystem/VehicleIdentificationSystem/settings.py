@@ -120,7 +120,7 @@ USE_TZ = True
 '''
 author: 郑志强
 create time: 2020/7/10
-update time: 2020/7/12
+update time: 2020/7/11
 '''
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [

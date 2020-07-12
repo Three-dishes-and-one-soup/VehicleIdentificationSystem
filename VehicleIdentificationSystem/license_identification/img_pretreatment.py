@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 author: 周行健
-create time: 2020/7/10
-update time: 2020/7/12
+create time: 2020.7.10
+update time: 2020.7.12
 """
 
 import cv2
