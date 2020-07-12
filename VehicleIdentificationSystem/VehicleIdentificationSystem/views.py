@@ -1,8 +1,13 @@
-from django.core.files import File
+'''
+author: 郑志强
+create time: 2020/7/10
+update time: 2020/7/12
+'''
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.conf import settings
 from license_identification import img_pretreatment
+
 
 def index(request):
     return render(request, 'MainPage.html')

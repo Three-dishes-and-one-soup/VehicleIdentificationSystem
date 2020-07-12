@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3ec23812-f0cf-4896-af77-10c59424984e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,16 +49,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/license_identification" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\model_identification" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\VehicleIdentificationSystem\VehicleIdentificationSystem\license_identification" />
+      <recent name="E:\VehicleIdentificationSystem\VehicleIdentificationSystem\model_car_detection" />
+      <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Django tests.Test: ">
@@ -131,11 +151,23 @@
       <workItem from="1594518480190" duration="326000" />
       <workItem from="1594519175968" duration="7917000" />
       <workItem from="1594536074565" duration="3975000" />
+      <workItem from="1594550412934" duration="1213000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="651" y="274" key="#Notifications" timestamp="1594522009607">

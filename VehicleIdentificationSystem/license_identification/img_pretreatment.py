@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jul 11 21:12:13 2020
-
-@author: lenovo
+author: 周行健
+create time: 2020/7/10
+update time: 2020/7/12
 """
 
 import cv2
