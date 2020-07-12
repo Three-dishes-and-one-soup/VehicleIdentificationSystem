@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>蔬菜汤智能识别项目</title>
+    <!-- 引入样式 -->
+<!--    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/Element-ui.css">
+</head>
+<body>
+<div id="app">
+    <!-- 标题和图片背景部分 -->
+    <el-container>
+        <!-- 最上部标题部分 -->
+        <el-header style="background-color: black; height: 70px">
+            <el-row>
+                <el-col :span="8" style="color: white; padding: 21px 0 0 10px; font-size: 1.05em;">蔬菜汤 | 车辆识别平台</el-col>
+                <el-col :span="16" style="color: white; padding: 21px 0 0 150px; font-size: 1.05em;">性价比最高的车辆识别系统</el-col>
+            </el-row>
+        </el-header>
+        <div id="ImageView" style="height: 700px; background-image: url(/static/images/Car/Bentley.jpg); background-size: cover; position: relative;">
+            <!--            <el-image :src="url" style="padding: 0px; z-index: -1; position: absolute"></el-image>-->
+            <el-container style="width: 71.4285%; position: absolute; left: 17%; top: 27%;">
+                <el-header style="color: white; font-size: 3em;">
+                    车辆综合识别系统
+                </el-header>
+                <el-main style="color: white; padding-right: 660px; height: 150px;">
+                    本项目以TensorFlow为基础平台，训练大量数据，可以对车辆牌号、类型、受损程度、驾驶员行为等各种信息进行综合识别，适用于交通、停车场等各种场景，并且完全免费。
+                </el-main>
+                <el-footer>
+                    <a href="{% url 'download-packages' %}">
+                    <el-button type="primary" style="margin-left: 20px; margin-right: 20px;">
+                        下载离线包
+                    </el-button>
+                    </a>
+                    <a href="{% url 'download-doc' %}">
+                    <el-button plain>
+                        下载技术文档
+                    </el-button>
+                    </a>
+                </el-footer>
+            </el-container>
+        </div>
+    </el-container>
+    <div style="width: 50%; margin: 0 auto;">
+        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" style="text-align: center;" :center="true">
+            <a href="{% url 'online-identification/model' %}">
+                <el-menu-item index="1" @click="hello(0)">车型识别</el-menu-item>
+            </a>
+            <a href="{% url 'online-identification/license' %}">
+                <el-menu-item index="2" @click="hello(1)">车牌识别</el-menu-item>
+            </a>
+            <a href="{% url 'online-identification/nums' %}">
+                <el-menu-item index="3" @click="hello(2)">车辆检测</el-menu-item>
+            </a>
+            <a href="{% url 'online-identification/attributes' %}">
+                <el-menu-item index="4" @click="hello(3)">车辆属性识别</el-menu-item>
+            </a>
+            <a href="{% url 'online-identification/destroy' %}">
+                <el-menu-item index="5" @click="hello(4)">车损识别</el-menu-item>
+            </a>
+            <a href="{% url 'online-identification/drive' %}">
+                <el-menu-item index="6" @click="hello(5)">驾驶行为分析</el-menu-item>
+            </a>
+        </el-menu>
+    </div>
+   <div style="width: 1000px; margin: 40px auto; box-shadow: 2px 4px 5px gray; border: 1px solid #ccc;">
+        <img id="backimg" :src="url" style="width: 1000px;height: 700px; object-fit: contain; border: none;">
+        <div id="formContent" style="">
+            <form action="/online-identification/model/" method="post" enctype="multipart/form-data" style="width: 600px; margin: 0 auto;">
+                {% csrf_token %}
+                <div style="padding-top: 20px">
+                    <a class="file" style="float: left;">选择文件
+                        <input type="file" name="picture" id="">
+                    </a>
+                    <div style="float: left; line-height: 30px; margin: 0 10px;">
+                        或
+                    </div>
+                    <input type="text" name="q" v-model="tempUrl" style="display: inline-block; margin: 0 auto;" placeholder="填写图片的URL">
+                </div>
+                <div style="margin-top: 30px; padding-bottom: 30px;">
+                    <input type="submit" value="检测" @click="setUrl">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<!-- 先引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<!--<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+<script src="/static/js/Element.js"></script>
+<script>
+    var ep = new Vue({
+        el: '#app',
+        data: {
+            "Bently": "/static/images/Car/Bentley.jpg",
+            "BMW": "/static/images/Car/BMW.jpg",
+            "Jaguar": "/static/images/Jaguar.jpg",
+            "Olu": "/static/images/Car/Olu.jpg",
+            "Porsche": "/static/images/Car/Porsche.jpg",
+            "Urus": "/static/images/Car/Urus.jpg",
+            "showList": [true, false, false, false, false, false],
+            "url":
+                {% if path %}
+                    "/static/media/{{ path }}"
+                {%else  %}
+                    "/static/images/Car/CarCar.jpg"
+                {% endif %},
+            tempUrl: ""
+        },
+        methods: {
+            show: function() {
+                Console.log("Hello");
+            },
+            hello: function(index) {
+                console.log(index);
+                console.log(this.showList[index]);
+            },
+            setUrl: function() {
+                this.url = this.tempUrl;
+                console.log(this.url);
+            },
+            readImg: function(obj) {
+                url = "";
+                var file = obj.files[0];
+                var reader = new  FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function (ev) {
+                    $("#backimg").attr("src", ev.target.result);
+                }
+            }
+        }
+    });
+</script>
+</html>
