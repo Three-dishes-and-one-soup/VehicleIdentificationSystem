@@ -1,0 +1,63 @@
+<!-- author: 张嘉程 -->
+<!-- create time: 2020/7/8 -->
+<!-- update time: 2020/7/12 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="testIndex.css">
+</head>
+<body>
+<div id="app">
+    <div style="width: 1000px; margin: 40px auto; box-shadow: 2px 4px 5px gray; ">
+        <img id="backimg" :src="url" style="width: 1000px;height: 700px; object-fit: contain;">
+        <div id="formContent" style="background-color: black; border-top: 1px solid #ccc;">
+            <form style="width: 600px; margin: 0 auto;">
+                <div style="padding-top: 20px">
+                    <a class="file" style="float: left;">
+                        <input type="file" name="" id="">&nbsp;&nbsp;选择文件&nbsp;&nbsp;
+                    </a>
+<!--                    <a class="file" style="margin-top: 20px">选择文件-->
+<!--                        <input type="file" name="" id="">-->
+<!--                    </a>-->
+                    <div style="float: left; color: white; line-height: 30px;">
+                        或
+                    </div>
+                    <input type="text" v-model="tempUrl" style="display: inline-block; margin: 0 auto;" placeholder="填写图片的URL">
+                </div>
+                <div style="margin-top: 30px; padding-bottom: 30px;">
+                    <input type="button" value="检测" @click="setUrl">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<!-- 先引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    var ep = new Vue({
+        el: '#app',
+        data: {
+            url: "Mercedes.jpg"
+        },
+        methods: {
+            show: function() {
+                return { visible: false }
+            }
+        }
+    })
+</script>
+
+
+<el-tabs id="nav">
+    <el-tab-pane label="项目介绍" name="first" @click="hello()"></el-tab-pane>
+    <el-tab-pane label="应用场景" name="second"></el-tab-pane>
+    <el-tab-pane label="在线尝试" name="third"></el-tab-pane>
+    <el-tab-pane label="联系我们" name="fourth"></el-tab-pane>
+</el-tabs>

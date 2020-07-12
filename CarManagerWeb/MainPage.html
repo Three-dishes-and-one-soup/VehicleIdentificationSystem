@@ -1,0 +1,223 @@
+<!-- author: 张嘉程 -->
+<!-- create time: 2020/7/8 -->
+<!-- update time: 2020/7/12 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>蔬菜汤智能识别项目</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+    <!-- 标题和图片背景部分 -->
+    <el-container>
+        <!-- 最上部标题部分 -->
+        <el-header style="background-color: black; height: 70px">
+            <el-row>
+                <el-col :span="8" style="color: white; padding: 21px 0 0 10px; font-size: 1.05em;">蔬菜汤 | 车辆识别平台</el-col>
+                <el-col :span="16" style="color: white; padding: 21px 0 0 150px; font-size: 1.05em;">性价比最高的车辆识别系统</el-col>
+            </el-row>
+        </el-header>
+        <div id="ImageView" style="height: 700px; background-image: url(Pictures/Car/Mercedes.jpg); background-size: cover; position: relative;">
+<!--            <el-image :src="url" style="padding: 0px; z-index: -1; position: absolute"></el-image>-->
+            <el-container style="width: 71.4285%; position: absolute; left: 17%; top: 27%;">
+                <el-header style="color: white; font-size: 3em;">
+                    车辆综合识别系统
+                </el-header>
+                <el-main style="color: white; padding-right: 660px; height: 150px;">
+                    本项目以TensorFlow为基础平台，训练大量数据，可以对车辆牌号、类型、受损程度、驾驶员行为等各种信息进行综合识别，适用于交通、停车场等各种场景，并且完全免费。
+                </el-main>
+                <el-footer>
+                    <el-button type="primary" style="margin-left: 20px; margin-right: 20px;">
+                        下载离线包
+                    </el-button>
+                    <el-button plain>
+                        下载技术文档
+                    </el-button>
+                </el-footer>
+            </el-container>
+        </div>
+    </el-container>
+
+    <div class="nav-container">
+        <div class="nav" style="width: 720px;">
+            <a href="" style="width: 140px;">项目介绍</a>
+            <a href="" style="width: 140px;">应用场景</a>
+            <a href="" style="width: 140px;">在线识别</a>
+            <a href="" style="width: 140px;">联系我们</a>
+        </div>
+    </div>
+
+    <!-- 标题 -->
+    <div id="container">
+        <el-row>
+            <el-col :span="24" style="padding: 100px 0px 50px; font-size: 32px;">
+                <div style="text-align: center;">项目介绍</div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="12" style="padding: 0 50px 0 400px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        基本信息
+                    </div>
+                    <div>
+                        蔬菜汤车辆识别平台是武汉大学计算机学院软件工程系的实训项目，开发团队为三菜一汤，成员有郑志强，周行健，翁玮熙和张嘉程。
+                    </div>
+                </div>
+            </el-col>
+            <el-col :span="12" style="padding: 0 400px 0 60px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        我们是谁
+                    </div>
+                    <div>
+                        三菜一汤团队，讲的是三个菜B经理和一个划水码农的故事。芜湖，起飞。
+                    </div>
+                </div>
+            </el-col>
+        </el-row>
+        <!-- 樱花 -->
+        <el-image :src="sakura" style="padding: 40px 430px 20px;"></el-image>
+        <div style="text-align: center; color: #666666">
+            武汉大学有美丽的樱花
+        </div>
+        <!-- 应用场景 -->
+        <el-row>
+            <el-col :span="24" style="padding: 100px 0px 50px; font-size: 32px;">
+                <div style="text-align: center;">应用场景</div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="13" style="padding: 0 50px 0 400px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        停车场出入车辆信息采集
+                    </div>
+                    <div>
+                        蔬菜汤车辆识别平台是武汉大学计算机学院软件工程系的实训项目，开发团队为三菜一汤，成员有郑志强，周行健，翁玮熙和张嘉程。
+                    </div>
+                </div>
+            </el-col>
+            <el-col :span="11" style="padding: 0 400px 0 0px">
+                <el-image :src="parkinglot"></el-image>
+            </el-col>
+        </el-row>
+        <el-row style="padding-top: 40px">
+            <el-col :span="13" style="padding: 0 50px 0 400px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        交通识别
+                    </div>
+                    <div>
+                        蔬菜汤车辆识别平台是武汉大学计算机学院软件工程系的实训项目，开发团队为三菜一汤，成员有郑志强，周行健，翁玮熙和张嘉程。
+                    </div>
+                </div>
+            </el-col>
+            <el-col :span="11" style="padding: 0 400px 0 0px">
+                <el-image :src="traffic" style="width: 370px"></el-image>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="24" style="padding: 100px 0px 20px 16px; font-size: 32px;">
+                <div style="text-align: center;">来试试在线识别吧！</div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="24" style="padding: 0 600px 0 600px">
+                <div>
+                    <div style="text-align: center; color: #666666">
+                        都看到这儿了不试试？？？你也许用不到一个称心如意的识别软件，但也许你可以被我们的代码给难受死。
+                    </div>
+                </div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <div style="margin: 0 auto; width: 10%; padding-top: 20px;">
+                <form>
+                    <el-button type="primary" id="distinguishBtn" style="border-radius: 0px; width: 168px; height: 50px" @click="show()">
+                        在线识别
+                    </el-button>
+                </form>
+<!--                <a href="https://baidu.com">-->
+
+<!--                </a>-->
+            </div>
+        </el-row>
+        <el-row>
+            <el-col :span="24" style="padding: 100px 0px 50px; font-size: 32px;">
+                <div style="text-align: center;">联系我们</div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="12" style="padding: 0 60px 0 650px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        电话
+                    </div>
+                    <div>
+                        029-85241473
+                    </div>
+                </div>
+            </el-col>
+            <el-col :span="12" style="padding: 0 400px 0 90px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        QQ
+                    </div>
+                    <div>
+                        694510779
+                    </div>
+                </div>
+            </el-col>
+        </el-row>
+    </div>
+
+    <el-container style="background-color: black; color: white; margin-top: 150px; height: 400px">
+        <div style="width: 560px; margin: 80px auto;">
+            <el-main>
+                <el-row>
+                    <el-col style="font-size: 22px; padding-bottom: 15px">
+                        版权信息
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col>
+                        Copyright © 2013-2020 蔬菜汤  vegetablesoup.xyz All Rights Reserved.
+                    </el-col>
+                </el-row>
+            </el-main>
+        </div>
+    </el-container>
+</div>
+</body>
+<!-- 先引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<!--<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    var ep = new Vue({
+        el: '#app',
+        data: {
+            url: "Pictures/Mercedes.jpg",
+            sakura: "Pictures/Sakura.png",
+            parkinglot: "Pictures/ParkingLot.png",
+            traffic: "Pictures/Traffic.jpeg",
+
+        },
+        methods: {
+            show: function() {
+                Console.log("Hello");
+            },
+            hello: function() {
+                document.querySelector("#intro").scrollIntoView(true);
+            }
+        }
+    });
+</script>
+</html>
