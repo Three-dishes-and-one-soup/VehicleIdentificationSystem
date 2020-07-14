@@ -127,7 +127,8 @@
                     停车场出入车辆信息采集
                 </div>
                 <div>
-                    蔬菜汤车辆识别平台是武汉大学计算机学院软件工程系的实训项目，开发团队为三菜一汤，成员有郑志强，周行健，翁玮熙和张嘉程。
+                    {#留着最后等产品经理来详细叙述各功能#}
+                    该产品可以用于采集停车场出入车辆信息。只需一个摄像头，就可记录出入停车场的所有车辆的详细信息，便于停车场的管理。
                 </div>
             </div>
         </el-col>
@@ -142,7 +143,8 @@
                     交通识别
                 </div>
                 <div>
-                    蔬菜汤车辆识别平台是武汉大学计算机学院软件工程系的实训项目，开发团队为三菜一汤，成员有郑志强，周行健，翁玮熙和张嘉程。
+                    实时监控交通道路、卡口的车流量，自动统计不同时段各类车辆的进出车流量，分析路口、路段的交通状况，
+                    为交通调度、路况优化提供精准参考依据。同时也可以记录违章车辆的信息。
                 </div>
             </div>
         </el-col>
@@ -165,7 +167,7 @@
         </el-col>
     </el-row>
     <el-row>
-        <a href="{% url 'online-identification' %}">
+        <a href="{% url 'online-identification/model' %}">
         <div style="margin: 0 auto; width: 10%; padding-top: 20px;">
             <el-button type="primary" id="distinguishBtn" style="border-radius: 0px; width: 168px; height: 50px" @click="show()">
                 在线识别

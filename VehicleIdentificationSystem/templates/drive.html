@@ -1,0 +1,34 @@
+{#author: 郑志强#}
+{#create time: 2020/7/14#}
+{#update time: 2020/7/14#}
+{% extends 'FunctionPage.html' %}
+
+{% block content %}
+<el-header style="color: white; font-size: 3em;">
+    行为分析
+</el-header>
+<el-main style="color: white; padding-right: 660px; height: 150px;">
+    针对车载场景，分析预警危险驾驶行为，提升行车安全性；
+    可识别图像中是否有人体（驾驶员）；检测到驾驶员后，进一步识别行为属性，
+    可识别使用手机、抽烟、不系安全带、双手离开方向盘、视角未朝前方5大类行为
+</el-main>
+{% endblock %}
+
+{% block download %}
+    <a href="{% url 'drive-download-packages' %}">
+        <el-button type="primary" style="margin-left: 20px; margin-right: 20px;">
+            下载离线包
+        </el-button>
+    </a>
+    <a href="{% url 'drive-download-doc' %}">
+        <el-button plain>
+            下载技术文档
+        </el-button>
+    </a>
+{% endblock %}
+
+{% block jump_path %}
+<div style="width: 1000px; margin: 40px auto; box-shadow: 2px 4px 5px gray; border: 1px solid #ccc;">
+    <form action="/online-identification/drive/" method="post" enctype="multipart/form-data" style="width: 600px; margin: 0 auto;">
+{% endblock %}
+

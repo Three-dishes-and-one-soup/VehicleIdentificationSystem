@@ -126,6 +126,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-ALLOW_UPLOAD = ['jpg', 'png', 'jpeg']
-MEDIA_ROOT = os.path.join(BASE_DIR, "static/media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "static/media").replace('\\', '/')
 
