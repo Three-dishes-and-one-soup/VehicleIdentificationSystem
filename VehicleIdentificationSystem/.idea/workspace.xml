@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ec23812-f0cf-4896-af77-10c59424984e" name="Default Changelist" comment="" />
+    <list default="true" id="3b77c504-783d-4a5b-a6c9-b5d92e669d44" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,41 +14,31 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectId" id="1eZ7XpkmaDyLjAKwK9YcZtyAdoD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1enS6g4l7mrg9N1IczST1wJfRV6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/nums" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\model_identification" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\model_car_detection" />
-      <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\license_identification" />
-      <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\VehicleIdentificationSystem\templates" />
+      <recent name="E:\pythonCode\VehicleIdentificationSystem\nums" />
+      <recent name="E:\pythonCode\VehicleIdentificationSystem\license" />
+      <recent name="E:\pythonCode\VehicleIdentificationSystem\nums\api" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: ">
-    <configuration name="Test: " type="DjangoTestsConfigurationType" temporary="true">
+  <component name="RunManager">
+    <configuration name="VehicleIdentificationSystem" type="Python.DjangoServer" factoryName="Django server">
       <module name="VehicleIdentificationSystem" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,151 +47,44 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="VehicleIdentificationSystem" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="urls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="VehicleIdentificationSystem" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VehicleIdentificationSystem" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VehicleIdentificationSystem/urls.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Django tests.Test: " />
-        <item itemvalue="Python.urls" />
-        <item itemvalue="Python.manage" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3ec23812-f0cf-4896-af77-10c59424984e" name="Default Changelist" comment="" />
-      <created>1594517303235</created>
+      <changelist id="3b77c504-783d-4a5b-a6c9-b5d92e669d44" name="Default Changelist" comment="" />
+      <created>1594955689897</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1594517303235</updated>
-      <workItem from="1594517304448" duration="647000" />
-      <workItem from="1594518188443" duration="207000" />
-      <workItem from="1594518480190" duration="326000" />
-      <workItem from="1594519175968" duration="7917000" />
-      <workItem from="1594536074565" duration="3975000" />
-      <workItem from="1594542455514" duration="2880000" />
-      <workItem from="1594556709917" duration="866000" />
-      <workItem from="1594691504009" duration="14970000" />
-      <workItem from="1594711277954" duration="5525000" />
+      <updated>1594955689897</updated>
+      <workItem from="1594955693866" duration="3297000" />
+      <workItem from="1594969913122" duration="14272000" />
+      <workItem from="1594987767834" duration="1098000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="651" y="274" key="#Notifications" timestamp="1594522009607">
+    <state x="623" y="246" key="FileChooserDialogImpl" timestamp="1594974825312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="651" y="274" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1594522009607" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594517484858">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1594517484858" />
-    <state x="527" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594699763921">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="527" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1594699763921" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594698182750">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594698182750" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1594550408687">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594550408687" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1594517407709">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594517407709" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1594517407709">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594517407709" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1594517407708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594517407708" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1594517407709">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594517407709" />
-    <state x="416" y="37" key="SettingsEditor" timestamp="1594524845599">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="416" y="37" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594524845599" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VehicleIdentificationSystem$urls.coverage" NAME="urls Coverage Results" MODIFIED="1594517369643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VehicleIdentificationSystem" />
-    <SUITE FILE_PATH="coverage/VehicleIdentificationSystem$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1594517407568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/VehicleIdentificationSystem$manage.coverage" NAME="manage Coverage Results" MODIFIED="1594517338903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <state x="623" y="246" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594974825312" />
   </component>
 </project>

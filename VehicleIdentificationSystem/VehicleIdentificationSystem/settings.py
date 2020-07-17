@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'yxj6ku@ssdzjhy-&)0(eb!3i=lsu&p^*2%e@l2)#^jcjvb)r2b'
+SECRET_KEY = ')ppauj32!t4&-$t^@0xd5r%=&eo70q4qsg9fai14c0n&3g-4rg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'license.apps.LicenseConfig',
+    'nums.apps.NumsConfig',
 ]
 
 MIDDLEWARE = [
@@ -117,14 +119,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-'''
-author: 郑志强
-create time: 2020/7/10
-update time: 2020/7/11
-'''
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-MEDIA_ROOT = os.path.join(BASE_DIR, "static/media").replace('\\', '/')
 
