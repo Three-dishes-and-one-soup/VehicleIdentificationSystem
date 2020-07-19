@@ -1,0 +1,26 @@
+<annotation>
+	<folder>out</folder>
+	<filename>01169.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\01169.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1024</width>
+		<height>683</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire engine</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>166</xmin>
+			<ymin>98</ymin>
+			<xmax>1024</xmax>
+			<ymax>643</ymax>
+		</bndbox>
+	</object>
+</annotation>

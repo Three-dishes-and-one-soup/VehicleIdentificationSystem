@@ -1,0 +1,26 @@
+<annotation>
+	<folder>out</folder>
+	<filename>00897.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\00897.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2560</width>
+		<height>1440</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>racing car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>563</xmin>
+			<ymin>622</ymin>
+			<xmax>2290</xmax>
+			<ymax>1259</ymax>
+		</bndbox>
+	</object>
+</annotation>

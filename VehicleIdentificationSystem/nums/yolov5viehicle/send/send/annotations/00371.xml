@@ -1,0 +1,26 @@
+<annotation>
+	<folder>out</folder>
+	<filename>00371.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\00371.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1073</width>
+		<height>645</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>98</xmin>
+			<ymin>221</ymin>
+			<xmax>873</xmax>
+			<ymax>586</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>out</folder>
+	<filename>01218.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\01218.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>800</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>family sedan</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>301</xmin>
+			<ymin>151</ymin>
+			<xmax>1044</xmax>
+			<ymax>665</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>out</folder>
+	<filename>01018.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\01018.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1279</width>
+		<height>828</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>jeep</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>56</xmin>
+			<ymin>31</ymin>
+			<xmax>1262</xmax>
+			<ymax>823</ymax>
+		</bndbox>
+	</object>
+</annotation>

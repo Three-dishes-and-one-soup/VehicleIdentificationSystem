@@ -1,0 +1,26 @@
+<annotation>
+	<folder>out</folder>
+	<filename>00598.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\00598.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1313</width>
+		<height>716</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>minibus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>81</xmin>
+			<ymin>64</ymin>
+			<xmax>1287</xmax>
+			<ymax>627</ymax>
+		</bndbox>
+	</object>
+</annotation>

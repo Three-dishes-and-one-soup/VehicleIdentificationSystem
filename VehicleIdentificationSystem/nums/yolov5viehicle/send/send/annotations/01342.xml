@@ -1,0 +1,26 @@
+<annotation>
+	<folder>三轮车</folder>
+	<filename>01342.jpg</filename>
+	<path>C:\Users\Administrator\Desktop\三轮车\三轮车\01342.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>333</width>
+		<height>269</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>tricycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>31</xmin>
+			<ymin>17</ymin>
+			<xmax>282</xmax>
+			<ymax>267</ymax>
+		</bndbox>
+	</object>
+</annotation>

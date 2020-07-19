@@ -1,0 +1,26 @@
+<annotation>
+	<folder>out</folder>
+	<filename>00191.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\00191.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>789</width>
+		<height>585</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>taxi</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>71</xmin>
+			<ymin>151</ymin>
+			<xmax>784</xmax>
+			<ymax>582</ymax>
+		</bndbox>
+	</object>
+</annotation>

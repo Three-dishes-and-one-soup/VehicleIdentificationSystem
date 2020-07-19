@@ -1,0 +1,26 @@
+<annotation>
+	<folder>摩托车</folder>
+	<filename>01487.jpg</filename>
+	<path>C:\Users\Administrator\Desktop\三轮车\摩托车\01487.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>500</width>
+		<height>375</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>motor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>40</xmin>
+			<ymin>65</ymin>
+			<xmax>443</xmax>
+			<ymax>317</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>out</folder>
+	<filename>01175.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\01175.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>jeep</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>175</xmin>
+			<ymin>75</ymin>
+			<xmax>1132</xmax>
+			<ymax>655</ymax>
+		</bndbox>
+	</object>
+</annotation>

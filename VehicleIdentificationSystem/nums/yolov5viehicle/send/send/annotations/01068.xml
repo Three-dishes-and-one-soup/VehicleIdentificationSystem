@@ -1,0 +1,38 @@
+<annotation>
+	<folder>out</folder>
+	<filename>01068.jpg</filename>
+	<path>C:\Users\Administrator\Downloads\out\01068.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2000</width>
+		<height>1125</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>minibus</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>359</xmin>
+			<ymin>75</ymin>
+			<xmax>1697</xmax>
+			<ymax>1125</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>family sedan</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>72</xmin>
+			<ymin>209</ymin>
+			<xmax>480</xmax>
+			<ymax>569</ymax>
+		</bndbox>
+	</object>
+</annotation>

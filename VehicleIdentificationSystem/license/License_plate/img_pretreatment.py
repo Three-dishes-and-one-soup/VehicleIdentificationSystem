@@ -2,7 +2,7 @@
 """
 author: 周行健
 create time: 2020.7.09
-update time: 2020.7.16
+update time: 2020.7.19
 """
 
 import cv2
@@ -56,7 +56,7 @@ def preIdentification(img_gray, img_HSV, img_B, img_R):
 # 定位
 def fixPosition(img, img_bin):
     # 检测所有外轮廓，只留矩形的四个顶点
-    contours, _ = cv2.findContours(img_bin, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    _, contours, _ = cv2.findContours(img_bin, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     #形状及大小筛选校验
     det_x_max = 0
     det_y_max = 0
@@ -92,7 +92,7 @@ def findVertices(points):
         right_point_x = box[2,0]
         top_point_y = box[1,1]
         bottom_point_y = box[0,1]
-        
+
         left_point_y = box[3,1]
         right_point_y = box[2,1]
         top_point_x = box[1,0]
@@ -105,7 +105,7 @@ def findVertices(points):
         right_point_x = np.max(box[:, 0])
         top_point_y = np.min(box[:, 1])
         bottom_point_y = np.max(box[:, 1])
-    
+
         left_point_y = box[:, 1][np.where(box[:, 0] == left_point_x)][0]
         right_point_y = box[:, 1][np.where(box[:, 0] == right_point_x)][0]
         top_point_x = box[:, 0][np.where(box[:, 1] == top_point_y)][0]
@@ -154,7 +154,7 @@ def transform(img, point_set_0, point_set_1):
 
 
 
-def run(path):     
+def run(path):
 
     img, img_Gas, img_B, img_G, img_R, img_gray, img_HSV = imgProcess(path)
     # 初步识别
