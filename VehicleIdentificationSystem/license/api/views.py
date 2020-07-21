@@ -3,9 +3,9 @@ author: 郑志强
 create time: 2020/7/15
 update time: 2020/7/19
 '''
-from django.http import JsonResponse
+from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_http_methods
+from rest_framework.response import Response
 import time
 import os
 from ..License_plate.final_solution import get_result
@@ -24,18 +24,18 @@ def save_image(image):
     return full_path.replace('\\', '/')
 
 @csrf_exempt
-@require_http_methods(['POST'])
+@api_view(['POST'])
 def get_license_result(request):
     response = {}
-    # try:
-    image = request.FILES.get('image')
-    tran_name(image)
-    full_path = save_image(image)
-    result = get_result(full_path)
-    response['msg'] = result
-    response['error_num'] = 0
-    # except Exception as e:
-    #     response['msg'] = str(e)
-    #     response['error_num'] = 1
+    try:
+        image = request.data['image']
+        tran_name(image)
+        full_path = save_image(image)
+        result = get_result(full_path)
+        response['msg'] = result
+        response['error_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
 
-    return JsonResponse(response)
+    return Response(response)

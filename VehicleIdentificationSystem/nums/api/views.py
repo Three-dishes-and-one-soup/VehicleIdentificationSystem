@@ -6,9 +6,9 @@ update time: 2020/7/19
 import os
 import time
 
-from django.http import JsonResponse
+from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_http_methods
+from rest_framework.decorators import api_view
 
 #from ..numspart.models import yolo
 
@@ -27,18 +27,14 @@ def save_image(image):
     return full_path.replace('\\', '/')
 
 @csrf_exempt
-@require_http_methods(['POST'])
+@api_view(['POST'])
 def get_license_result(request):
     response = {}
-    '''
     try:
-        image = request.FILES.get('image')
+        image = request.data['image']
         tran_name(image)
         full_path = save_image(image)
-        print(full_path)
-        print(os.path.abspath('.'))
         result_data = apiRequest(full_path)
-        print(result_data)
         result_img = onlineRequest(full_path)
         result_img_path = save_image(result_img)
         response['msg'] = result_data
@@ -47,18 +43,7 @@ def get_license_result(request):
     except Exception as e:
         response['msg'] = str(e)
         response['error_num'] = 1
-    '''
-    image = request.FILES.get('image')
-    tran_name(image)
-    full_path = save_image(image)
-    print(full_path)
-    result_data = apiRequest(full_path)
-    print(result_data)
-    result_img = onlineRequest(full_path)
-    result_img_path = save_image(result_img)
-    response['msg'] = result_data
-    response['img'] = result_img_path
-    response['error_num'] = 0
-    return JsonResponse(response)
+    return Response(response)
+
 
 
