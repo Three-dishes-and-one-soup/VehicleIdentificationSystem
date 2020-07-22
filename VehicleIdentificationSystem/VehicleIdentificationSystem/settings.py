@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'license.apps.LicenseConfig',
     'nums.apps.NumsConfig',
-    'rest_framework'
+    'carmodels.apps.CarmodelsConfig',
+    'driveractions.apps.DriveractionsConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

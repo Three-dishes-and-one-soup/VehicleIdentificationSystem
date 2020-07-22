@@ -25,4 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/license/', include('license.api.urls', namespace='license')),
     path('api/nums/', include('nums.api.urls', namespace='nums')),
+    path('api/carmodels/', include('carmodels.api.urls', namespace='carmodels')),
+    path('api/driveractions/', include('driveractions.api.urls', namespace='driveractions')),
 ]

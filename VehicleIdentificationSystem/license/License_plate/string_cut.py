@@ -18,7 +18,7 @@ def find_end(start_, width, arg, black_max, white_max, black, white):
 
 def cut(img):
     # 1、读取图像，并把图像转换为灰度图像并显示
-    #img = cv2.imread(path) # 读取图片
+    img = cv2.imread(img) # 读取图片
 
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # 转换了灰度化
 
@@ -26,8 +26,6 @@ def cut(img):
     # 2、将灰度图像二值化，设定阈值是100
     img_thre = img_gray
     cv2.threshold(img_gray, 100, 255, cv2.THRESH_BINARY, img_thre)
-    cv2.imshow('l', img_thre)
-    cv2.waitKey(0)
 
     # 3、分割字符
     white = [] # 记录每一列的白色像素总和
@@ -73,18 +71,16 @@ def cut(img):
             start = n
             end = find_end(start, width, arg, black_max, white_max, black, white)
             n = end
-            print(end-start)
             if end-start > 10:
-                print(111)
-                cj = img_thre[1:height, start:end]
-                cj = cv2.resize(cj,(32,40))
+                cj = img_thre[:, start:end]
+                cj = cv2.copyMakeBorder(cj,0,0,int(50-(end-start)/2),int(50-(end-start)/2),cv2.BORDER_CONSTANT,value=[0,0,0])
+                cj = cv2.resize(cj, (32, 40))
                 pic_path = cache_path + str(x) + '.bmp'
-                print(pic_path)
                 cv2.imwrite(pic_path,cj)
                 x += 1
 
 
 
 
-
+#cut('p.jpg')
 

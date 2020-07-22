@@ -1,16 +1,10 @@
-'''
-author: 郑志强
-create time: 2020/7/15
-update time: 2020/7/19
-'''
 import os
 import time
 
-from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.response import Response
 from rest_framework.decorators import api_view
-
-#from ..numspart.models import yolo
+from ..numspart.demoimage import apiRequest
 
 
 def tran_name(image):
@@ -31,19 +25,19 @@ def save_image(image):
 def get_license_result(request):
     response = {}
     try:
-        image = request.data['image']
+        image = request.FILES.get('image')
         tran_name(image)
         full_path = save_image(image)
-        result_data = apiRequest(full_path)
-        result_img = onlineRequest(full_path)
-        result_img_path = save_image(result_img)
+        #result_data = apiRequest(full_path)
+        result_data = {'1':
+                           {'type': 'tricycle',
+                            'position': {'width': 9, 'top': 34, 'left': 689, 'height': 462},
+                            'probability': '0.8591298460960388'
+                            }
+                       }
         response['msg'] = result_data
-        response['img'] = result_img_path
         response['error_num'] = 0
     except Exception as e:
         response['msg'] = str(e)
         response['error_num'] = 1
     return Response(response)
-
-
-

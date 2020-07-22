@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3b77c504-783d-4a5b-a6c9-b5d92e669d44" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,19 +49,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/license/License_plate" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\VehicleIdentificationSystem\VehicleIdentificationSystem\license\License_plate" />
+      <recent name="E:\VehicleIdentificationSystem\VehicleIdentificationSystem\driveractions" />
+      <recent name="E:\VehicleIdentificationSystem\VehicleIdentificationSystem\carmodels" />
       <recent name="D:\QQMessage\1020980646\FileRecv\VehicleIdentificationSystem\nums" />
       <recent name="C:\Users\AzureUser\Downloads\new\VehicleIdentificationSystem-master\VehicleIdentificationSystem\nums\numspart" />
-      <recent name="C:\Users\AzureUser\Downloads\new\VehicleIdentificationSystem-master\VehicleIdentificationSystem\nums\api" />
-      <recent name="C:\Users\AzureUser\Downloads\new\VehicleIdentificationSystem-master\VehicleIdentificationSystem\nums\api\inference" />
-      <recent name="E:\pythonCode\VehicleIdentificationSystem\nums" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\VehicleIdentificationSystem\VehicleIdentificationSystem\license\License_plate" />
       <recent name="C:\Users\AzureUser\Downloads\new\VehicleIdentificationSystem-master\VehicleIdentificationSystem\nums\api" />
     </key>
   </component>
@@ -242,11 +261,24 @@
       <workItem from="1595149814071" duration="1271000" />
       <workItem from="1595160144268" duration="147000" />
       <workItem from="1595293260757" duration="569000" />
+      <workItem from="1595397330366" duration="2270000" />
+      <workItem from="1595399628383" duration="3602000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595133915659">

@@ -36,9 +36,9 @@ def predict():
 
     SAVER_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'License_plate/train-saver/digits/')
 
-    DIGITS = ("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","U","V","W","X","Y","Z")
+    LETTERS_DIGITS = ("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","U","V","W","X","Y","Z")
 
-
+    result_digits = []
 
      # 定义输入节点，对应于图片像素值矩阵集合和图片标签(即所代表的数字)
      #tf.placeholder为tf1的API
@@ -132,8 +132,15 @@ def predict():
                     max3_index = j
                     continue
 
-            license_num = license_num + DIGITS[max1_index]
-#           print ("概率：  [%s %0.2f%%]    [%s %0.2f%%]    [%s %0.2f%%]" % (LETTERS_DIGITS[max1_index],max1*100, LETTERS_DIGITS[max2_index],max2*100, LETTERS_DIGITS[max3_index],max3*100))
+            license_num = license_num + LETTERS_DIGITS[max1_index]
+            #print ("概率：  [%s %0.2f%%]    [%s %0.2f%%]    [%s %0.2f%%]" % (LETTERS_DIGITS[max1_index],max1*100, LETTERS_DIGITS[max2_index],max2*100, LETTERS_DIGITS[max3_index],max3*100))
+            results = LETTERS_DIGITS[max1_index] + '\t' + str(max1*100) + '%'
+            #print(results)
+            result_digits.append(results)
+        #print(result_digits)
+        #print(result_digits[0])
+        #print ("车牌编号是: 【%s】" % license_num)
+        return result_digits
 
-#       print ("车牌编号是: 【%s】" % license_num)
-        return max1_index, max1, max2_index, max2, max3_index, max3
+
+#predict()
