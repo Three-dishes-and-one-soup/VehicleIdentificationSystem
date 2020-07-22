@@ -42,11 +42,11 @@ def get_license_result(request):
                 'second': {'result': 'Y', 'probability': 0},
                 'third': {'result': 'K', 'probability': 0}},
             'dig': {
-                'first': {'result': '1', 'probability': 1},
-                'second': {'result': 'W', 'probability': 0.9999},
-                'third': {'result': 'Y', 'probability': 0.9963},
-                'forth': {'result': 'A', 'probability': 0.9999},
-                'fifth': {'result': 'A', 'probability': 0.9971}}
+                'first': {'result': 'I', 'probability': 1},
+                'second': {'result': '6', 'probability': 0.9999},
+                'third': {'result': '7', 'probability': 0.9963},
+                'forth': {'result': '2', 'probability': 0.9999},
+                'fifth': {'result': 'Q', 'probability': 0.9971}}
         }
         response['msg'] = result
         response['error_num'] = 0

@@ -263,6 +263,7 @@
       <workItem from="1595293260757" duration="569000" />
       <workItem from="1595397330366" duration="2270000" />
       <workItem from="1595399628383" duration="3602000" />
+      <workItem from="1595403916707" duration="105000" />
     </task>
     <servers />
   </component>
@@ -279,6 +280,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595133915659">
