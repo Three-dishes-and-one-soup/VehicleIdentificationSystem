@@ -1,0 +1,301 @@
+/* author: 张嘉程 */
+/* create time: 2020/7/8 */
+/* update time: 2020/7/12 */
+
+
+body {
+    margin: 0px;
+    min-width: 1450px;
+    font-family: BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, PingFangSC-Regular, "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+#container {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+#ImageView {
+    background: no-repeat 50%;
+}
+
+#distinguishBtn {
+    background-color: #036fe2;
+    transition: 0s;
+    -webkit-transition: 0s;
+}
+
+#distinguishBtn:hover {
+    background:#66b1ff;
+    border-color:#66b1ff;
+    color:#FFF;
+}
+
+/*表单样式*/
+#formContent {
+}
+
+#formContent input[type=text] {
+    width: 450px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 30px;
+    color: #706c70;
+    outline: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+#formContent input[type=text]:focus {
+    border: 2px solid #555;
+}
+
+#formContent input[type=submit], #formContent input[type=button] {
+    display: block;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    margin: 0 auto;
+    border: none;
+    color: #706c70;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,37,55,.5);
+    cursor: pointer;
+
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+#formContent input[type=submit]:hover, #formContent input[type=button]:hover {
+    background-color: #706c70;
+    color: #FFFFFF;
+}
+
+.btn {
+
+}
+
+
+/*上传文件样式*/
+.file {
+    position: relative;
+    display: inline-block;
+    background: #0073eb;
+    border: none;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #ffffff;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 22px;
+    box-shadow: 0px 1px 3px gray;
+
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+/*.file input {*/
+/*    position: absolute;*/
+/*    font-size: 100px;*/
+/*    right: 0;*/
+/*    top: 0;*/
+/*    opacity: 0;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*导航栏样式*/
+.nav-container {
+    height: 60px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.nav a {
+    width: 120px;
+    line-height: 30px;
+    display: inline-block;
+    color: #909399;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+    color: black;
+    border-bottom: 2px solid #409EFF;
+}
+
+.active a {
+    color: black;
+    border-bottom: 2px solid #409EFF;
+}
+
+.function-nav{
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.function-nav a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.function-nav:hover {
+    border-bottom: 2px solid #409EFF;
+}
+
+#backImg {
+    width: 800px;
+    height: 500px;
+    object-fit: contain;
+    border: none;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+.el-collapse-item__content {
+    height: 375px;
+}
+
+
+
+ul.menu {
+    padding: 0;
+    list-style: none;
+    width: 400px;
+    margin: 0px auto;
+    font-family: 'Century Gothic';
+    /*box-shadow: 0px 0px 25px #00000070;*/
+    clear: both;
+    display: table;
+}
+ul.menu .list {
+    font-size: 14px;
+    border-bottom: 1px solid #324252;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    vertical-align: sub;
+    background: white;
+    clear: both;
+}
+/*ul.menu .list:after {*/
+/*    content: "\f107";*/
+/*    font-family: FontAwesome;*/
+/*    position: absolute;*/
+/*    right: 17px;*/
+/*    top: 17px;*/
+/*    padding: 0px 5px;*/
+/*    color: #fff;*/
+/*}*/
+/*ul.menu .list:before {*/
+/*    content: '\f07b';*/
+/*    font-family: FontAwesome;*/
+/*    position: absolute;*/
+/*    left: 17px;*/
+/*    top: 17px;*/
+/*    padding: 0px 5px;*/
+/*    color: #fff;*/
+/*}*/
+ul.menu .list a {
+    text-decoration: none;
+    color: black;
+    padding: 17px 0px 17px 45px;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+}
+ul.menu .list a:hover {
+    background-color: #efefef;
+    transition: 300ms all;
+    color: black;
+}
+ul.menu .list .items {
+    height: 0px;
+    overflow: hidden;
+}
+ul.menu .list .items a {
+    padding: 17px;
+}
+ul.menu .list .items a:hover {
+    color: black;
+    transition: 300ms all;
+}
+/*ul.menu .list:last-child {*/
+/*    border-bottom: none;*/
+/*}*/
+/*ul.menu .active:after {*/
+/*    content: "\f106";*/
+/*    font-family: FontAwesome;*/
+/*    position: absolute;*/
+/*    right: 17px;*/
+/*    top: 17px;*/
+/*    padding: 0px 5px;*/
+/*    color: #fff;*/
+/*}*/
+/*ul.menu .active:before {*/
+/*    content: '\f07c';*/
+/*    font-family: FontAwesome;*/
+/*    position: absolute;*/
+/*    left: 17px;*/
+/*    top: 17px;*/
+/*    padding: 0px 5px;*/
+/*    color: #fff;*/
+/*}*/
+ul.menu .active > .items {
+    display: block;
+    background: white;
+    padding: 0px;
+    height: auto;
+    color: black;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 200ms;
+    clear: both;
+    float: left;
+    width: 100%;
+    outline: none;
+}
+ul.menu .active > .items li {
+    padding: 0px;
+    border-bottom: 1px solid #324252;
+    list-style: none;
+}
+ul.menu .active > .items li:last-child {
+    border-color: transparent;
+    padding-bottom: 0px;
+}
+ul.menu .active > .items .active > .items {
+    background-color: #efefef;
+}
+ul.menu .active > a {
+    color: black;
+}
+ul.menu .active .list {
+    background: #efefef;
+}
+ul.menu .active .list a {
+    padding: 17px 0px 17px 45px;
+}
+
+
+

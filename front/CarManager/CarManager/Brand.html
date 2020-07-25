@@ -1,0 +1,382 @@
+<!-- author: 张嘉程 -->
+<!-- create time: 2020/7/8 -->
+<!-- update time: 2020/7/25 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>车型识别</title>
+    <!-- 引入样式 -->
+<!--    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+    <link rel="stylesheet" href="newindex.css">
+    <link rel="stylesheet" href="Element-ui.css">
+</head>
+<body>
+<div id="app">
+    <!-- 标题和图片背景部分 -->
+    <el-container>
+        <!-- 最上部标题部分 -->
+        <el-header style="background-color: black; height: 70px">
+            <el-row>
+                <el-col :span="8" style="color: white; padding: 21px 0 0 10px; font-size: 1.05em;">蔬菜汤 | 车辆识别平台</el-col>
+                <el-col :span="16" style="color: white; padding: 21px 0 0 150px; font-size: 1.05em;">性价比最高的车辆识别系统</el-col>
+            </el-row>
+        </el-header>
+        <div id="ImageView" style="height: 700px; background-image: url(Pictures/Car/BMW.jpg); background-size: cover; position: relative;">
+            <!--            <el-image :src="url" style="padding: 0px; z-index: -1; position: absolute"></el-image>-->
+            <el-container style="width: 1200px; position: absolute; left: 17%; top: 27%;">
+                <el-header style="color: white; font-size: 3em;">
+                    车辆型号识别
+                </el-header>
+                <el-main style="color: white; padding-right: 660px; height: 150px;">
+                    识别图片中主流的若干种车辆的品牌，型号等信息。能够应用于相册管理、图片分类打标签、电子汽车说明书、一键拍照租车等场景。
+                </el-main>
+                <el-footer>
+                	<a href="http://stevetichbucket.bj.bcebos.com/%E8%BD%A6%E5%9E%8B%E8%AF%86%E5%88%AB%E7%A6%BB%E7%BA%BF%E5%8C%85.7z?authorization=bce-auth-v1%2F0a983a29938c420a86e7c1fd6ac37f6a%2F2020-07-25T08%3A19%3A32Z%2F300%2Fhost%2Fa074f1f5439df402cbc78492e556eecb847b91913de8bbfd316926653c8800d3">
+						<el-button type="primary" style="margin-left: 20px; margin-right: 20px;">
+                        	下载离线包
+                    	</el-button>
+                	</a>                   
+                    <a href="http://stevetichbucket.bj.bcebos.com/webapi%E8%B0%83%E7%94%A8%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3.docx?authorization=bce-auth-v1%2F0a983a29938c420a86e7c1fd6ac37f6a%2F2020-07-25T09%3A35%3A33Z%2F300%2Fhost%2F62f87414d0ed91a4ee949d31c52e8ac2a098f543b0a62697d67328e81a52c38d">
+                        <el-button plain>
+                            下载技术文档
+                        </el-button>
+                    </a>
+                </el-footer>
+            </el-container>
+        </div>
+    </el-container>
+    <div class="nav-container" style="position: sticky; top: 0px; background-color: white; z-index: 100;">
+        <div id="functionNav" class="nav" style="width: 764px;">
+            <a href="MainPage.html#functionNav">介绍界面</a>
+            <a href="Brand.html#functionNav" style="color: black; border-bottom: 2px solid #409EFF;">车型识别</a>
+            <a href="License.html#functionNav">车牌识别</a>
+            <a href="Type.html#functionNav">车辆检测</a>
+            <a href="Damage.html#functionNav">行为识别</a>
+        </div>
+    </div>
+    <div id="container">
+        <el-row>
+            <el-col :span="24" style="padding: 35px 0px 5px; font-size: 32px;">
+                <div style="text-align: center;">功能演示</div>
+            </el-col>
+        </el-row>
+        <div style="width: 1120px; margin: 40px auto; border: 1px solid #ccc; position: relative; box-shadow: 0px 3px 3px gray">
+            <div style="overflow: hidden; position: relative;">
+                <div id="result" style="width: 280px; height: 200px; background-color: #036fe2; position: absolute; z-index: 2; padding: 20px; display: none; box-sizing: border-box;">
+                    <div style="font-size: 16px; color: white; width: 80%; margin: 0 auto; padding-bottom: 10px;">
+                        识别结果
+                    </div>
+                    <div id="final_result1" style="color: white; width: 80%; margin: 0 auto; font-size: 14px; padding-bottom: 10px;">
+
+                    </div>
+                    <div id="final_result2" style="color: white; width: 80%; margin: 0 auto; font-size: 14px;">
+
+                    </div>
+                </div>
+                <img id="backImg" src="Pictures/Car/Mercedes.jpg" style="box-sizing: border-box;">
+                <div style="float: left; overflow: hidden; box-sizing: border-box; width: 320px; height: 500px;">
+                    <ul class="menu">
+                        <li class="list"><a href="javascript:void(0)">Request——请求</a>
+                            <ul class="items">
+                                <div id="request_result" style="padding: 20px; width: 320px; height: 402px; word-wrap: break-word; word-break: break-all; overflow: auto; box-sizing: border-box; white-space: pre-wrap;">
+                                <pre style="font-family: BlinkMacSystemFont;">
+Data：
+Image=”图片”
+Post：
+https://vegetablesoup.chinaeast.cloudapp.chinacloudapi.cn/api/carmodels/result/
+                                </pre>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="list"><a href="javascript:void(0)">Response——结果</a>
+                            <ul class="items">
+                                <div style="padding: 20px; width: 320px; height: 400px; word-wrap: break-word; word-break: break-all; overflow: auto; box-sizing: border-box;">
+                                    <p>Response展示如下：</p>
+                                    <pre id="response_result" style="font-family: BlinkMacSystemFont;">
+
+                                    </pre>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="formContent" style="border-top: 2px solid #999999">
+                <form style="width: 610px; margin: 0 auto;">
+                    <div style="padding-top: 50px">
+                        <label for="uploadImg" class="file" style="float: left;">&nbsp;&nbsp;选择文件&nbsp;&nbsp;</label>
+                        <input type="file" name="image" id="uploadImg" style="display: none">
+                        <!--                    <a class="file" style="margin-top: 20px">选择文件-->
+                        <!--                        <input type="file" name="" id="">-->
+                        <!--                    </a>-->
+                        <div style="float: left; line-height: 30px; margin: 0 15px;">
+                            或
+                        </div>
+                        <input type="text" id="urlText" style="display: inline-block; margin: 0 auto; width: 345px;" placeholder="填写图片的URL">
+                        <input type="button" style="outline: none; width: 105px; height: 30px; display: inline-block" value="上传网图" onclick="uploadUrl()">
+                    </div>
+                    <div style="margin-top: 40px; padding-bottom: 45px;">
+                        <input type="button" value="检测" style="outline: none;" onclick="uploadImage()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <el-container style="background-color: black; color: white; margin-top: 150px; height: 400px">
+        <div style="width: 560px; margin: 80px auto;">
+            <el-main>
+                <el-row>
+                    <el-col style="font-size: 22px; padding-bottom: 15px">
+                        版权信息
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col>
+                        Copyright © 2013-2020 蔬菜汤  vegetablesoup.xyz All Rights Reserved.
+                    </el-col>
+                </el-row>
+            </el-main>
+        </div>
+    </el-container>
+</div>
+</body>
+
+<!-- 先引入 Vue -->
+<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+<!--<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+<script src="Vue.js"></script>
+
+<!-- 引入组件库 -->
+<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+<script src="Element.js"></script>
+<script src="axios.js"></script>
+<script>
+    var ep = new Vue({
+        el: '#app',
+        data: {
+            imgUrl: "Pictures/Car/Mercedes.jpg"
+        },
+        methods: {
+            showTheImg: function() {
+                return { visible: false }
+            },
+            setUrl: function() {
+                console.log("123");
+            }
+        }
+    });
+
+    document.getElementById('uploadImg').onchange = function(){
+        //获取到文件
+        f = this.files[0];
+        //console.log(this.files[0]);
+        console.log(typeof(f));
+        // console.dir(this);
+
+        //限制上传的代码格式与大小
+        var fileSize = this.files[0].size;
+        var size = fileSize / 1024;
+
+        if(size>2000){
+            alert("附件不能大于2M");
+            return
+        }
+
+        //限制上传的文件格式
+        var name = this.files[0].name;
+        fileName = name.substring(name.lastIndexOf(".")+1).toLowerCase();
+        if(fileName !="jpg" && fileName !="jpeg" && fileName !="pdf"
+            && fileName !="png" && fileName !="dwg" && fileName !="gif" ){
+            alert("请选择图片格式文件上传(jpg,png,gif,dwg,pdf,gif等)！");
+            this.files[0].name = "";
+            return
+        }
+
+        // 将文件生成一个url路径字符串
+        var url = URL.createObjectURL(this.files[0]);
+
+        // 将图片展示在div的盒子里面
+        // document.querySelector('.imgShow').style.background = "url("+ url + ") no-repeat center/cover";
+
+        //也可以将图片显示在img单标签里面
+        document.querySelector('#backImg').src = url;
+    };
+
+    function uploadImage() {
+        // console.log("测试上传：");
+        // console.log(f);
+
+        //1. 获取到上传的文件
+        // var self = this;
+        // console.log(form1.element.value);
+        // let file = e.target.files[0];
+        let file = f;
+        text = null;
+        document.getElementById('urlText').value = null;
+
+        //2. 创建form对象,将文件内容添加到form对象中
+        let param = new FormData();  // 创建form对象
+        var time = parseInt( (new Date().getTime()) / 1000 );
+        var n = time + "." + fileName;
+
+        console.log("展示文件名：");
+        console.log(n);
+        param.append('image', file, n);  // 通过append向form对象添加数据
+        param.append('path', "");
+
+        console.log("展示param：");
+        console.log(param.get('image')); // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+        console.log(param.get('path'));
+
+        // 设置请求头
+        let config = {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With, Current-Page',
+                'Access-Control-Allow-Methods': 'PUT, POST, GET, DELETE, OPTIONS'
+            }
+        };
+
+        // 添加请求头,发送请求头
+        const url = "http://139.217.133.134/api/carmodels/result/";
+        axios.post(url, param, config).then(response => {
+
+            //打印请求成功后返回的值
+            console.log("展示返回值：");
+            console.log(response.data);
+            var box = document.getElementById("result");
+            box.style.display = 'block';
+
+            var result1 = document.getElementById("final_result1");
+            var brand1 = response.data.msg["1"].label;
+            result1.innerHTML = brand1;
+            console.log(brand1);
+
+            var result2 = document.getElementById("final_result2");
+            var brand2 = response.data.msg["2"].label;
+            result2.innerHTML = brand2;
+            console.log(brand2);
+
+            var string_pretty = JSON.stringify(response.data, null, 4);
+            var response_result = document.getElementById("response_result");
+            response_result.innerHTML = string_pretty;
+        });
+    };
+
+    function uploadUrl() {
+    	var param = new FormData();
+    	var text = document.getElementById('urlText').value;
+
+    	param.append('path', text);
+
+    	// 设置请求头
+        let config = {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With, Current-Page',
+                'Access-Control-Allow-Methods': 'PUT, POST, GET, DELETE, OPTIONS'
+            }
+        };
+
+        // 添加请求头,发送请求头
+        const url = "http://139.217.133.134/api/carmodels/result/";
+        axios.post(url, param, config).then(response => {
+
+            //打印请求成功后返回的值
+            console.log("展示返回值：");
+            console.log(response.data);
+            var box = document.getElementById("result");
+            box.style.display = 'block';
+
+            var result1 = document.getElementById("final_result1");
+            var brand1 = response.data.msg["1"].label;
+            result1.innerHTML = brand1;
+            console.log(brand1);
+
+            var result2 = document.getElementById("final_result2");
+            var brand2 = response.data.msg["2"].label;
+            result2.innerHTML = brand2;
+            console.log(brand2);
+
+            var string_pretty = JSON.stringify(response.data, null, 4);
+            var response_result = document.getElementById("response_result");
+            response_result.innerHTML = string_pretty;
+
+            // ProcessUrl();
+        });
+        f = null;
+        ProcessUrl();
+
+    };
+
+    function ProcessUrl() {
+        var text = document.getElementById('urlText').value;
+        console.log(text);
+        document.querySelector('#backImg').src = text;
+
+        var image = new Image();
+        image.src = text;
+        image.setAttribute("crossOrigin", "Anonymous");
+        image.onload = function () {
+            var base64 = getBase64Image(image);
+            f = btof(base64, "WebImg");
+        }
+    };
+
+    function getBase64Image(img) {
+        var canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, img.width, img.height);
+        var ext = img.src.substring(img.src.lastIndexOf(".") + 1).toLowerCase();
+        var dataURL = canvas.toDataURL("image/" + ext);
+
+        return dataURL;
+    };
+
+    function btof(data, fileName) {
+        const dataArr = data.split(",");
+        const byteString = atob(dataArr[1]);
+
+        const options = {
+            type: "image/jpeg",
+            endings: "native"
+        };
+        const u8Arr = new Uint8Array(byteString.length);
+        for (let i = 0; i < byteString.length; i++) {
+            u8Arr[i] = byteString.charCodeAt(i);
+        }
+        return new File([u8Arr], fileName + ".jpg", options);
+    }
+</script>
+<script>
+    var list = document.querySelectorAll('.list');
+
+    function accordion(e) {
+        e.stopPropagation();
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else
+        if (this.parentElement.parentElement.classList.contains('active')) {
+            this.classList.add('active');
+        } else
+        {
+            for (i = 0; i < list.length; i++) {
+                list[i].classList.remove('active');
+
+            }
+            this.classList.add('active');
+        }
+    }
+
+    for (i = 0; i < list.length; i++) {
+        console.log(list[i]);
+        list[i].addEventListener('click', accordion);
+    }
+</script>
+</html>

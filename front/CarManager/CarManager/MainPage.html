@@ -1,0 +1,326 @@
+<!-- author: 张嘉程 -->
+<!-- create time: 2020/7/8 -->
+<!-- update time: 2020/7/25 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>蔬菜汤智能识别项目</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="Element-ui.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+    <!-- 标题和图片背景部分 -->
+    <el-container>
+        <!-- 最上部标题部分 -->
+        <el-header style="background-color: black; height: 70px">
+            <el-row>
+                <el-col :span="8" style="color: white; padding: 21px 0 0 10px; font-size: 1.05em;">蔬菜汤 | 车辆识别平台</el-col>
+                <el-col :span="16" style="color: white; padding: 21px 0 0 150px; font-size: 1.05em;">性价比最高的车辆识别系统</el-col>
+            </el-row>
+        </el-header>
+        <div id="ImageView" style="height: 700px; background-image: url(Pictures/Car/Mercedes.jpg); background-size: cover; position: relative;">
+<!--            <el-image :src="url" style="padding: 0px; z-index: -1; position: absolute"></el-image>-->
+            <el-container style="width: 1200px; position: absolute; left: 17%; top: 27%;">
+                <el-header style="color: white; font-size: 3em;">
+                    车辆综合识别系统
+                </el-header>
+                <el-main style="color: white; width: 560px; height: 150px;">
+                    本项目以TensorFlow为基础平台，训练大量数据，可以对车辆牌号、类型、受损程度、驾驶员行为等各种信息进行综合识别，适用于交通、停车场等各种场景，并且完全免费。
+                </el-main>
+                <el-footer>
+                    <el-button type="primary" style="margin-left: 20px; margin-right: 20px;">
+                        下载离线包
+                    </el-button>
+                    <a href="http://stevetichbucket.bj.bcebos.com/webapi%E8%B0%83%E7%94%A8%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3.docx?authorization=bce-auth-v1%2F0a983a29938c420a86e7c1fd6ac37f6a%2F2020-07-25T09%3A35%3A33Z%2F300%2Fhost%2F62f87414d0ed91a4ee949d31c52e8ac2a098f543b0a62697d67328e81a52c38d">
+                        <el-button plain>
+                            下载技术文档
+                        </el-button>
+                    </a>
+                </el-footer>
+            </el-container>
+        </div>
+    </el-container>
+
+    <div class="nav-container" style="position: sticky; top: 0px; background-color: white; z-index: 100;">
+        <div class="nav" style="width: 720px;">
+            <a href="javascript:void(0)" style="width: 140px;" onclick="scroll_to(1)">项目介绍</a>
+            <a href="javascript:void(0)" style="width: 140px;" onclick="scroll_to(2)">应用场景</a>
+
+            <a href="javascript:void(0)" style="width: 140px;" onclick="scroll_to(3)">在线识别</a>
+            <a href="javascript:void(0)" style="width: 140px;" onclick="scroll_to(4)">联系我们</a>
+        </div>
+    </div>
+
+    <!-- 标题 -->
+    <div id="container">
+        <el-row>
+            <el-col :span="24" style="padding: 100px 0px 50px; font-size: 32px;">
+                <div id="intro" style="text-align: center;">项目介绍</div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="12" style="padding: 0 50px 0 120px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        基本信息
+                    </div>
+                    <div>
+                        蔬菜汤车辆识别平台是武汉大学计算机学院软件工程系的实训项目，开发团队为三菜一汤，成员有郑志强，周行健，翁玮熙和张嘉程。
+                    </div>
+                </div>
+            </el-col>
+            <el-col :span="12" style="padding: 0 120px 0 60px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        我们是谁
+                    </div>
+                    <div>
+                        三菜一汤团队，讲的是三个菜B经理和一个划水码农的故事。芜湖，起飞。
+                    </div>
+                </div>
+            </el-col>
+        </el-row>
+        <!-- 樱花 -->
+        <el-image :src="sakura" style="padding: 40px 150px 20px;"></el-image>
+        <div style="text-align: center; color: #666666">
+            武汉大学有美丽的樱花
+        </div>
+        <!-- 应用场景 -->
+        <el-row>
+            <el-col :span="24" style="padding: 100px 0px 50px; font-size: 32px;">
+                <div id="scene" style="text-align: center;">应用场景</div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="13" style="padding: 0 50px 0 120px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        停车场出入车辆信息采集
+                    </div>
+                    <div>
+                        在智能停车场的出入口安装的摄像头连接平台，可以获取进出车辆的车牌号和相应车型，实现高效的车辆管理。
+                    </div>
+                </div>
+            </el-col>
+            <!--   图片1   -->
+            <el-col :span="11" style="padding: 0 120px 0 0px">
+                <el-image :src="parkinglot" style="width: 370px"></el-image>
+            </el-col>
+        </el-row>
+        <el-row style="padding-top: 40px">
+            <el-col :span="13" style="padding: 0 50px 0 120px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        交通识别
+                    </div>
+                    <div>
+                        在交通识别，比如长途客运公司能够给客运车安装摄像头，连接平台，可以实时监控辨别驾驶员的驾驶行为，也能够对路况进行实时监测。
+                    </div>
+                </div>
+            </el-col>
+            <!--   图片2   -->
+            <el-col :span="11" style="padding: 0 120px 0 0px">
+                <el-image :src="traffic" style="width: 370px"></el-image>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="24" style="padding: 100px 0px 20px 16px; font-size: 32px;">
+                <div id="online" style="text-align: center;">来试试在线识别吧！</div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="24" style="padding: 0 320px 0 320px">
+                <div>
+                    <div style="text-align: center; color: #666666">
+                        接下来是4个我们团队设计的功能，值得一提的是，这4个功能都是我们团队从零开始编写的，没有使用API，希望得到您的支持！
+                    </div>
+                </div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <div style="margin: 0 auto; width: 168px; padding-top: 20px;">
+                <form>
+                	<a href="Brand.html">
+                		<el-button type="primary" id="distinguishBtn" style="border-radius: 0px; width: 168px; height: 50px; transition: 0.2s;" @click="show()">
+                        	在线识别
+                    	</el-button>
+                	</a>
+                </form>
+<!--                <a href="https://baidu.com">-->
+
+<!--                </a>-->
+            </div>
+        </el-row>
+
+        <el-row style="padding-top: 60px">
+            <el-col :span="12" style="padding: 20px 90px 10px 210px">
+                <div class="function-nav" style="padding-left: 3px">
+                    <a href="Brand.html">
+                        <el-row style="font-size: 22px; padding-bottom: 10px">
+                            车型识别
+                        </el-row>
+                        <el-row style="font-size: 14px; padding-bottom: 10px">
+                            识别常见车辆的品牌和型号信息
+                        </el-row>
+                    </a>
+                </div>
+            </el-col>
+            <el-col :span="12" style="padding: 20px 200px 10px 100px">
+                <div class="function-nav" style="padding-left: 3px">
+                    <a href="License.html">
+                        <el-row style="font-size: 22px; padding-bottom: 10px">
+                            车牌识别
+                        </el-row>
+                        <el-row style="font-size: 14px; padding-bottom: 10px">
+                            支持对中国大陆机动车车牌的识别，包括地域编号和车牌号
+                        </el-row>
+                    </a>
+                </div>
+            </el-col>
+        </el-row>
+        <el-row style="padding-top: 20px">
+            <el-col :span="12" style="padding: 20px 90px 10px 210px">
+                <div class="function-nav" style="padding-left: 3px">
+                    <a href="Type.html">
+                        <el-row style="font-size: 22px; padding-bottom: 10px">
+                            车辆检测
+                        </el-row>
+                        <el-row style="font-size: 14px; padding-bottom: 10px">
+                            检测图像中的所有车辆，返回各类车辆的数量、以及每辆车的位置信息
+                        </el-row>
+                    </a>
+                </div>
+            </el-col>
+            <el-col :span="12" style="padding: 20px 200px 10px 100px">
+                <div class="function-nav" style="padding-left: 3px">
+                    <a href="Damage.html">
+                        <el-row style="font-size: 22px; padding-bottom: 10px">
+                            行为识别
+                        </el-row>
+                        <el-row style="font-size: 14px; padding-bottom: 10px">
+                            识别驾驶员的各种行为，如喝水、抽烟、从后方取东西等等
+                        </el-row>
+                    </a>
+                </div>
+            </el-col>
+        </el-row>
+
+        <el-row>
+            <el-col :span="24" style="padding: 100px 0px 50px; font-size: 32px;">
+                <div id="contact" style="text-align: center;">联系我们</div>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="12" style="padding: 0 60px 0 370px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        电话
+                    </div>
+                    <div>
+                        029-85241473
+                    </div>
+                </div>
+            </el-col>
+            <el-col :span="12" style="padding: 0 120px 0 90px">
+                <div>
+                    <div style="font-size: 22px; font-weight: 700; padding-bottom: 15px;">
+                        QQ
+                    </div>
+                    <div>
+                        694510779
+                    </div>
+                </div>
+            </el-col>
+        </el-row>
+    </div>
+
+    <el-container style="background-color: black; color: white; margin-top: 150px; height: 400px">
+        <div style="width: 560px; margin: 80px auto;">
+            <el-main>
+                <el-row>
+                    <el-col style="font-size: 22px; padding-bottom: 15px">
+                        版权信息
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col>
+                        Copyright © 2020 蔬菜汤 仅作学习使用  vegetablesoup.xyz All Rights Reserved.
+                    </el-col>
+                </el-row>
+                <el-row style="padding-top: 5px;">
+                    <el-col>
+                        在此鸣谢：感谢三菜一汤小组的成员们和各位老师、同学，因为你们，这个网站才能与大家相见，谢谢
+                    </el-col>
+                </el-row>
+            </el-main>
+        </div>
+    </el-container>
+</div>
+</body>
+<!-- 先引入 Vue -->
+<script src="Vue.js"></script>
+<!-- 引入组件库 -->
+<!--<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+<script src="Element.js"></script>
+<script src="jquery.js"></script>
+<script>
+    var ep = new Vue({
+        el: '#app',
+        data: {
+            url: "Pictures/Mercedes.jpg",
+            sakura: "Pictures/Sakura.png",
+            parkinglot: "Pictures/ParkingLot.png",
+            traffic: "Pictures/Traffic.jpeg",
+            scene: false
+        },
+        methods: {
+            show: function() {
+                Console.log("Hello");
+            },
+            hello: function() {
+                document.querySelector("#intro").scrollIntoView(true);
+            },
+            move: function (e) {
+                console.log(e);
+                switch (e) {
+                    case 1:
+                        this.scene = true;
+                        break;
+                    default:
+                        return ;
+                }
+            }
+        }
+    });
+</script>
+<script>
+</script>
+<script>
+    function scroll_to(e) {
+    	switch(e) {
+    		case 1:
+    			var h = $('#intro').offset().top - 100;
+    			break;
+    		case 2:
+    			var h = $('#scene').offset().top - 100;
+    			break;
+    		case 3:
+    			var h = $('#online').offset().top - 100;
+    			break;
+    		case 4:
+    			var h = $('#contact').offset().top - 100;
+    			break;
+    	}
+        
+        $('html,body').animate({ scrollTop: h}, 450);
+        // window.scrollTo({
+        //     top: h,
+        //     behavior: "smooth"
+        // });
+    }
+</script>
+</html>

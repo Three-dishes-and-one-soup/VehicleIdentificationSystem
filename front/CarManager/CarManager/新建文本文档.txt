@@ -1,0 +1,8 @@
+<html>
+<header>
+<title>index</title>
+</header>
+<script language="javascript" type="">
+window.location.href="/MainPage.html"
+</script>
+</html>

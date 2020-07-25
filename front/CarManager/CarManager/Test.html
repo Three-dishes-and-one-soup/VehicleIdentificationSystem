@@ -1,0 +1,48 @@
+<!-- author: 张嘉程 -->
+<!-- create time: 2020/7/8 -->
+<!-- update time: 2020/7/25 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="testIndex.css">
+</head>
+<body>
+<div id="app">
+    <div style="width: 1000px; margin: 40px auto; box-shadow: 2px 4px 5px gray; ">
+        <img id="backImg" src="Pictures/Car/Mercedes.jpg" style="width: 1000px;height: 700px; object-fit: contain;">
+        <div id="formContent" style="background-color: black; border-top: 1px solid #ccc;">
+            <form style="width: 600px; margin: 0 auto;" name="form1">
+                <div style="padding-top: 20px">
+                    <label for="uploadImg" class="file" style="float: left;">&nbsp;&nbsp;选择文件&nbsp;&nbsp;</label>
+                    <input type="file" name="" id="uploadImg" style="display: none">
+
+<!--                    <a class="file" style="margin-top: 20px">选择文件-->
+<!--                        <input type="file" name="" id="">-->
+<!--                    </a>-->
+                    <div style="float: left; color: white; line-height: 30px;">
+                        或
+                    </div>
+                    <input type="text" style="display: inline-block; margin: 0 auto;" placeholder="填写图片的URL">
+                </div>
+                <div style="margin-top: 30px; padding-bottom: 30px;">
+                    <input type="button" value="检测" onclick="uploadImage()">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--<label for="fileBtn" class="uploadFile">上传文件</label>-->
+<!--<input type="file" id="fileBtn" style="display: none" @change="show">-->
+</body>
+<!-- 先引入 Vue -->
+<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+<script src="Vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="Upload.js"></script>
